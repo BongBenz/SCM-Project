@@ -10,14 +10,25 @@ public class Process {
 	
 	public int XProcess() {
 		this.sum = 0;
-		//--project A --//
-		if(this.sales <= 50000){
-			this.sum = (int)(0.05*this.sales);
-			this.sum = this.sum + this.salary;
-		}
-		else if(this.sales > 50000){
-			this.sum = (int)((0.10)*this.sales);
-			this.sum = this.sum + this.salary;
+		//--project A version 1.1.0--//
+		if(this.salary <= 10000) {
+			if(this.sales <= 50000){
+				this.sum = (int)(0.05*this.sales);
+				this.sum = this.sum + this.salary;
+			}
+			else if(this.sales > 50000){
+				this.sum = (int)((0.10)*this.sales);
+				this.sum = this.sum + this.salary;
+			}
+		}else if (this.salary > 10000) {
+			if(this.sales <= 100000){
+				this.sum = (int)(0.05*this.sales);
+				this.sum = this.sum + this.salary;
+			}
+			else if(this.sales > 100000){
+				this.sum = (int)((0.10)*this.sales);
+				this.sum = this.sum + this.salary;
+			}
 		}
 		return this.sum;
 	}
