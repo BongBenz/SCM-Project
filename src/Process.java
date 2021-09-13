@@ -12,11 +12,11 @@ public class Process {
 		this.sum = 0;
 		//--project A --//
 		if(this.sales <= 50000){
-			this.sum = (int)(0.05*this.salary);
+			this.sum = (int)(0.05*this.sales);
 			this.sum = this.sum + this.salary;
 		}
 		else if(this.sales > 50000){
-			this.sum = (int)((0.10)*this.salary);
+			this.sum = (int)((0.10)*this.sales);
 			this.sum = this.sum + this.salary;
 		}
 		return this.sum;
